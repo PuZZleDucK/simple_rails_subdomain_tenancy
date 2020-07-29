@@ -11,7 +11,7 @@
 
   <body>
     <div>
-      <h3>Subdomain: <%= request.subdomain %></h3>
+      <h3>Subdomain: <%= request.subdomain %> (Company: <%= Company.where(subdomain: request.subdomain).last&.name || "Global/Invalid" %>)</h3>
     </div>
     <div>
       <p class="notice"><%= notice %></p>
