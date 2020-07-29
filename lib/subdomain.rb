@@ -2,7 +2,7 @@
 class Subdomain
     def self.matches?(request)
         case request.subdomain
-        when 'www', 'beddoes', '', nil
+        when 'www', 'beddoes', 'admin', 'ftp', 'portal', 'mail', 'mx', 'm', 'smtp', 'vpn', 'api', 'imap', 'pop', 'support', 'help', 'static', '', nil
             false
         else
            true
