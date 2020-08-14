@@ -1,24 +1,11 @@
-# README
+# Simple Subdomain and Tenancy for Rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Simple demonstration of using custom subdomains in Rails.
 
-Things you may want to cover:
+## Setup
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* `git clone git@github.com:PuZZleDucK/simple_rails_subdomain_tenancy.git`
+* `cd simple_rails_subdomain_tenancy`
+* `bundle`
+* setup rails db
+* `bundle exec rails sever`
