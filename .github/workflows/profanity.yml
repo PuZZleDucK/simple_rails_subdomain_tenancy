@@ -1,0 +1,25 @@
+name: Profanity Check
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  test:
+
+    runs-on: python-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
+        architecture: 'x64'
+    - name: Setup profanity check
+      run: pip3 install profanityfilter
+    - name: Run profanity check
+      run: profanityfilter -f README.md
+  
