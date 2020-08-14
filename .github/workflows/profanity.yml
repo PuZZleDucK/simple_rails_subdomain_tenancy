@@ -9,15 +9,14 @@ on:
 jobs:
   test:
 
-    runs-on: python-latest
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
-        python-version: '3.x' # Version range or exact version of a Python version to use, using SemVer's version range syntax
-        architecture: 'x64'
+        python-version: '3.8'
     - name: Setup profanity check
       run: pip3 install profanityfilter
     - name: Run profanity check
