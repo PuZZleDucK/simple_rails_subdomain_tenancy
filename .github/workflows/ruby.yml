@@ -29,6 +29,10 @@ jobs:
         ruby-version: 2.6
     - name: Install dependencies
       run: bundle install
+    - name: Verify MySQL connection from host
+      run: |
+        sudo apt-get install -y mysql-client libmysqlclient-dev
+        mysql --host 127.0.0.1 --port ${{ job.services.mysql.ports[3306] }} -uroot -proot -e "SHOW GRANTS FOR 'root'@'lo
     - name: Setup DB
       run: bundle exec rails db:create db:migrate
     - name: Run tests
