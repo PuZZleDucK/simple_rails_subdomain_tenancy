@@ -7,5 +7,5 @@ Simple demonstration of using custom subdomains in Rails.
 * `git clone git@github.com:PuZZleDucK/simple_rails_subdomain_tenancy.git`
 * `cd simple_rails_subdomain_tenancy`
 * `bundle`
-* shit up rails db
+* setup rails db
 * `bundle exec rails sever`
