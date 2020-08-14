@@ -1,13 +1,14 @@
 Rails.application.routes.draw do
+  devise_for :users
 
   constraints(Subdomain) do
     root to: 'companies#index'
     get 'users/index'
+    resources :users, only: [:index]
   end
   constraints(NoSubdomain) do
     root to: 'companies#index'
     resources :companies
-    devise_for :users
     get 'users/index'
     resources :users, only: [:index]
   end
