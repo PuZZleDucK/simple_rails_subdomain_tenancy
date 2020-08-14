@@ -29,6 +29,8 @@ jobs:
         ruby-version: 2.6
     - name: Install dependencies
       run: bundle install
+    - name: Start MySQL
+      run: mysql.server start
     - name: Verify MySQL socket
       run: mysqladmin variables | grep socket
     - name: Verify MySQL connection from host
