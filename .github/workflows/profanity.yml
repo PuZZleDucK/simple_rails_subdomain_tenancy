@@ -20,5 +20,5 @@ jobs:
     - name: Setup profanity check
       run: pip3 install profanityfilter
     - name: Run profanity check
-      run: profanityfilter -f README.md
+      run: if [[ `profanityfilter -f README.md` == *"This text is not clean"* ]] ; then false ; else true ; fi
   
